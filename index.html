@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Lo.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<div class="stars"></div>
+<div class="hearts"></div>
+
+<main>
+<section class="hero">
+  <div class="glass hero-card">
+    <div class="mini-heart">♥</div>
+
+    <p class="eyebrow">ADA SESUATU YANG MAU GUA SAMPEIN</p>
+
+    <h1>P, <span>Lo.</span></h1>
+
+    <p class="subtitle">
+      Mungkin agak random... tapi kali ini gua mau jujur.
+    </p>
+
+    <button class="primary" id="startBtn">
+      Buka pesannya <span>→</span>
+    </button>
+
+    <p class="tiny">Tenang, nggak ada jebakan 😭</p>
+  </div>
+
+  <div class="scroll-hint">scroll pelan-pelan ↓</div>
+</section>
+
+<!-- LETTER -->
+<section class="letter hidden" id="letter">
+  <div class="glass letter-card">
+    <div class="letter-top">
+      <span>20 SEPTEMBER 2026</span>
+      <span>♡</span>
+    </div>
+
+    <div class="letter-line"></div>
+
+    <h2>gua mau jujur...</h2>
+
+    <div class="typing" id="typing"></div>
+
+    <button class="ghost" id="continueBtn">
+      Lanjut baca <span>↓</span>
+    </button>
+  </div>
+</section>
+
+<!-- QUESTION -->
+<section class="question hidden" id="question">
+  <div class="glass question-card">
+    <div class="question-glow"></div>
+
+    <div class="ring">♡</div>
+
+    <p class="eyebrow">SATU PERTANYAAN</p>
+
+    <h2>
+      Jujur dah lu sekarang<br>
+      <span>lu sebenarnya suka gua kan...</span>
+    </h2>
+
+    <p class="question-text">
+      lu tiap hari liatin gua mulu soalnya 😭<br>
+      setiap gua nengok, lu langsung pura-pura nggak lihat.
+    </p>
+
+    <div class="choices">
+      <button class="yes" id="yesBtn">
+        gas gis gus 💗
+      </button>
+
+      <button class="maybe" id="maybeBtn">
+        Gua pikir-pikir dulu 😳
+      </button>
+    </div>
+
+    <p class="respect">
+      Apa pun jawaban lu, Gua tetap menghargai lu ko.ey santai.
+    </p>
+
+    <div class="reply-box">
+      <p class="eyebrow">KALAU MAU, TULIS PESAN BUAT GUA</p>
+      <textarea id="userMessage" maxlength="2000" placeholder="Tulis pesan lu di sini..."></textarea>
+      <button class="primary" id="sendMessage">
+        Kirim pesan <span>→</span>
+      </button>
+      <p id="sendStatus" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ENDING -->
+<section class="ending hidden" id="ending">
+  <div class="glass ending-card">
+    <div class="big-heart">♥</div>
+
+    <p class="ending-label">JAWABANNYA SUDAH DITERIMA</p>
+
+    <h2>Terima kasih sudah baca sampai sini.</h2>
+
+    <p id="endingText"></p>
+
+    <div class="signature">
+      — dari seseorang yang akhirnya berani jujur.
+    </div>
+
+    <button class="again" id="againBtn">
+      Lihat lagi ↻
+    </button>
+  </div>
+</section>
+</main>
+
+<button class="music" id="musicBtn" aria-label="Nyalakan musik">♫</button>
+<audio id="bgMusic" src="lagu.mp4" preload="auto"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
